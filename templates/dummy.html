@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+    <title>Dummy Page</title> 
+    {% endblock %}
+
+
+  
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+    
+
+
+    <style>
+        body
+        {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    </style>
+
+
+</head>
+
+<body style="background-image: url();">
+    <nav class="navbar navbar-expand-lg navbar-dark indigo">
+        <a class="navbar-brand" href="{% url 'dummy' %}">Dummy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'home' %}">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'registration' %}">Registration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'login' %}">LogIn</a>
+            </li>
+          </ul>
+          <span class="navbar-text white-text">
+            Welcome...!
+          </span>
+        </div>
+      </nav>
+
+    {% block center %}
+    <center><h1>Welcome To my HTML Page</h1></center>
+    {% endblock %}
+
+    
+
+    {% block body_block %}  
+    {% endblock %}
+
+
+
+
+
+
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/mdb.js' %}"></script>
+</body>
+</html>
